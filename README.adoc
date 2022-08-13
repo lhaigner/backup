@@ -1,0 +1,74 @@
+:toc:
+
+= Backup
+
+== Introduction
+
+This repository contains scripts to
+
+* archive the author's data.
+* synchronize archives to the author's chosen backup servers.
+* test backups, and report the results to the author's chosen *incident response tool* (*IRT*).
+* recover from a data loss.
+
+NOTE: The IRT alerts me when no report was submitted within a given time frame.
+
+This repository isn't
+
+* a backup tool, such as borgbackup or restic.
+* a data synchronization tool, such as rsync or rclone.
+* a guide on how to build your own backup solution.
+
+== Audience
+
+This section describes this repository's target audience. The target audience falls into the following roles:
+
+* Linux sysadmin
+
+The target audience knows
+
+* how to write bash scripts.
+* how to log into remote GNU+Linux systems.
+* how to use command line interfaces.
+* how to transfer files between Linux-based systems programmatically.
+* how to use Git.
+
+== File structure
+
+This section describes this repository's file structure.
+
+* `scripts` contains all of the bash scripts.
+** `backup.sh` creates archives and synchronizes them to backends.
+** `recovery.sh` tries to recover data from the backends.
+** `test.sh` validates backups recovered using `recovery.sh`, and the reports results to the IRT.
+* `README.adoc` is what you read at the moment.
+
+== Disaster recovery
+
+This section describes possible scenarios and how to recover from them.
+
+=== Data loss
+
+1. Clone this repository.
+1. Run the `recovery.sh` script.
+1. Answer the prompts.
+
+TIP: Refer to your disaster recovery instructions hard copy to answer the prompts in case of memory loss.
+
+=== Backup failure
+
+Do your job ¯\\_(ツ)_/¯
+
+== Future plans
+
+Migrate to Python ASAP.
+
+== Reference
+
+.Glossary
+[%header,cols=2*]
+|===
+|Acronym
+|Full term
+|IRT|Incident Response Tool
+|===
