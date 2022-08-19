@@ -15,7 +15,7 @@ NOTE: The IRT alerts me when no report was submitted within a given time frame.
 
 This repository isn't
 
-* a backup tool, such as borgbackup or restic.
+* a generic backup tool, such as borgbackup or restic.
 * a data synchronization tool, such as rsync or rclone.
 * a guide on how to build your own backup solution.
 
@@ -27,7 +27,7 @@ This section describes this repository's target audience. The target audience fa
 
 The target audience knows
 
-* how to write bash scripts.
+* how to write and maintain python scripts.
 * how to log into remote GNU+Linux systems.
 * how to use command line interfaces.
 * how to transfer files between Linux-based systems programmatically.
